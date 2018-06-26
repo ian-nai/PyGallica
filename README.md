@@ -2,6 +2,15 @@
 A Python wrapper for the National Library of France's Gallica API.
 The package contains basic classes and associated methods for querying the [Search API](http://api.bnf.fr/api-gallica-de-recherche), [Gallica IIIF API](http://api.bnf.fr/api-iiif-de-recuperation-des-images-de-gallica), and the [Document API](http://api.bnf.fr/api-document-de-gallica). No API keys are required.
 
+### Getting Started
+
+Install the requirements from your terminal:
+
+```
+pip install -r requirements.txt
+```
+Then launch Python to start using the package.
+
 ### Search API
 
 The Search API allows you to perform keyword searches in Gallica's holdings and retrieve xml returned by those searches.
