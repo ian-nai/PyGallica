@@ -11,7 +11,7 @@ class Search(object):
     
     #This function passes your queries, separated by commas, in addition to the record you'd like to start with. 
     
-        RECHERCHE_BASEURL = 'http://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&query=(gallica all '
+        RECHERCHE_BASEURL = 'https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&query=(gallica all '
         START_REC = ')&startRecord='
     
         for arg in args:
