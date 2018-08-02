@@ -9,7 +9,7 @@ class IIIF(object):
     @staticmethod
     def iiif(id, region, size, rotation, quality, format):
     
-        IIIF_BASEURL = 'http://gallica.bnf.fr/iiif/ark:/'
+        IIIF_BASEURL = 'https://gallica.bnf.fr/iiif/ark:/'
       
         url = "".join([IIIF_BASEURL, id, '/', region, '/', size, '/', rotation, '/', quality, '.', format])
         print url
@@ -24,7 +24,7 @@ class IIIF(object):
             
     @staticmethod
     def metadata(id):
-        METADATA_BASEURL = 'http://gallica.bnf.fr/iiif/ark:/'
+        METADATA_BASEURL = 'https://gallica.bnf.fr/iiif/ark:/'
         req_url = "".join([METADATA_BASEURL, id, '/info.json'])
     
         print req_url
