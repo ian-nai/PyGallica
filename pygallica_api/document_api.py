@@ -11,7 +11,7 @@ class Document(object):
     @staticmethod
     def issues(id):
     
-        ISSUES_BASEURL = 'http://gallica.bnf.fr/services/Issues?ark=ark:/'
+        ISSUES_BASEURL = 'https://gallica.bnf.fr/services/Issues?ark=ark:/'
     
         url = "".join([ISSUES_BASEURL, id, '/date'])
         print url
@@ -28,7 +28,7 @@ class Document(object):
     @staticmethod
     def issues_date(id, date):
     
-        ISSUESDATE_BASEURL = 'http://gallica.bnf.fr/services/Issues?ark=ark:/'
+        ISSUESDATE_BASEURL = 'https://gallica.bnf.fr/services/Issues?ark=ark:/'
       
         url = "".join([ISSUESDATE_BASEURL, id, '/date', '&date=', date])
         print url
@@ -45,7 +45,7 @@ class Document(object):
     @staticmethod
     def OAI(id):
     
-        OAI_BASEURL = 'http://gallica.bnf.fr/services/OAIRecord?ark=ark:/'
+        OAI_BASEURL = 'https://gallica.bnf.fr/services/OAIRecord?ark=ark:/'
     
         url = "".join([OAI_BASEURL, id])
         print url
@@ -62,7 +62,7 @@ class Document(object):
     @staticmethod
     def pagination(id):
     
-        PAGINATION_BASEURL = 'http://gallica.bnf.fr/services/Pagination?ark=ark:/'
+        PAGINATION_BASEURL = 'https://gallica.bnf.fr/services/Pagination?ark=ark:/'
     
         url = "".join([PAGINATION_BASEURL, id])
         print url
@@ -79,7 +79,7 @@ class Document(object):
     @staticmethod
     def simple_images(id, res):
     
-        IMAGES_BASEURL = 'http://gallica.bnf.fr/ark:/'
+        IMAGES_BASEURL = 'https://gallica.bnf.fr/ark:/'
     
         url = "".join([IMAGES_BASEURL, id, '/', res])
         print url
@@ -92,7 +92,7 @@ class Document(object):
     @staticmethod
     def content(id, query):
     
-        CONTENT_BASEURL = 'http://gallica.bnf.fr/services/ContentSearch?ark='
+        CONTENT_BASEURL = 'https://gallica.bnf.fr/services/ContentSearch?ark='
     
         url = "".join([CONTENT_BASEURL, id, '&query=', query])
         print url
@@ -109,7 +109,7 @@ class Document(object):
     @staticmethod
     def content_page(id, query, page):
     
-        CONTENTPAGE_BASEURL = 'http://gallica.bnf.fr/services/ContentSearch?ark='
+        CONTENTPAGE_BASEURL = 'https://gallica.bnf.fr/services/ContentSearch?ark='
     
         url = "".join([CONTENTPAGE_BASEURL, id, '&query=', query, '&page=', page])
         print url
@@ -126,7 +126,7 @@ class Document(object):
     @staticmethod
     def toc(id):
     
-        TOC_BASEURL = 'http://gallica.bnf.fr/services/Toc?ark='
+        TOC_BASEURL = 'https://gallica.bnf.fr/services/Toc?ark='
     
         url = "".join([TOC_BASEURL, id])
         print url
@@ -142,7 +142,7 @@ class Document(object):
             
     @staticmethod
     def texte_brut(id):
-        TEXTEBRUT_BASEURL = 'http://gallica.bnf.fr/ark:/'
+        TEXTEBRUT_BASEURL = 'https://gallica.bnf.fr/ark:/'
     
         url = "".join([TEXTEBRUT_BASEURL, id, '.texteBrut'])
         print url
@@ -158,7 +158,7 @@ class Document(object):
             
     @staticmethod
     def ocr(id, page):
-        OCR_BASEURL = 'http://gallica.bnf.fr/RequestDigitalElement?O='
+        OCR_BASEURL = 'https://gallica.bnf.fr/RequestDigitalElement?O='
     
         url = "".join([OCR_BASEURL, id, '&E=ALTO&Deb=', page])
         print url
