@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name = 'pygallica',
-    packages = ['pygallica'], 
+    packages = ['pygallica_api'], 
     version = '0.1',
     description = 'A Python client for the Gallica API',
     author = 'Ian Goodale',
