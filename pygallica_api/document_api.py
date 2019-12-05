@@ -1,8 +1,8 @@
-import urllib
-import xmltodict
-import requests
 import shutil
-
+import requests
+import xmltodict
+from bs4 import BeautifulSoup
+from xml.etree import ElementTree as ET
 
 # Full documentation for this API can be found on Gallica's site: http://api.bnf.fr/api-document-de-gallica
 
@@ -16,10 +16,11 @@ class Document(object):
         url = "".join([ISSUES_BASEURL, id, '/date'])
         print url
     
-        s = urllib.urlopen(url)
-        contents = s.read()
+        s = requests.get(url, stream=True)
+        soup = BeautifulSoup(s.content,"lxml-xml")
+        print soup
         file = open('issues.xml', 'w')
-        file.write(contents)
+        file.write(soup.prettify().encode('UTF-8'))
         file.close()
         with open('issues.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -33,10 +34,11 @@ class Document(object):
         url = "".join([ISSUESDATE_BASEURL, id, '/date', '&date=', date])
         print url
     
-        s = urllib.urlopen(url)
-        contents = s.read()
+        s = requests.get(url, stream=True)
+        soup = BeautifulSoup(s.content,"lxml-xml")
+        print soup
         file = open('issues_date.xml', 'w')
-        file.write(contents)
+        file.write(soup.prettify().encode('UTF-8'))
         file.close()
         with open('issues_date.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -50,10 +52,10 @@ class Document(object):
         url = "".join([OAI_BASEURL, id])
         print url
     
-        s = urllib.urlopen(url)
-        contents = s.read()
+        s = requests.get(url, stream=True)
+        soup = BeautifulSoup(s.content,"lxml-xml")
         file = open('oai.xml', 'w')
-        file.write(contents)
+        file.write(soup.prettify().encode('UTF-8'))
         file.close()
         with open('oai.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -67,10 +69,10 @@ class Document(object):
         url = "".join([PAGINATION_BASEURL, id])
         print url
     
-        s = urllib.urlopen(url)
-        contents = s.read()
+        s = requests.get(url, stream=True)
+        soup = BeautifulSoup(s.content,"lxml-xml")
         file = open('pagination.xml', 'w')
-        file.write(contents)
+        file.write(soup.prettify().encode('UTF-8'))
         file.close()
         with open('pagination.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -97,10 +99,10 @@ class Document(object):
         url = "".join([CONTENT_BASEURL, id, '&query=', query])
         print url
     
-        s = urllib.urlopen(url)
-        contents = s.read()
+        s = requests.get(url, stream=True)
+        soup = BeautifulSoup(s.content,"lxml-xml")
         file = open('content.xml', 'w')
-        file.write(contents)
+        file.write(soup.prettify().encode('UTF-8'))
         file.close()
         with open('content.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -114,10 +116,10 @@ class Document(object):
         url = "".join([CONTENTPAGE_BASEURL, id, '&query=', query, '&page=', page])
         print url
     
-        s = urllib.urlopen(url)
-        contents = s.read()
+        s = requests.get(url, stream=True)
+        soup = BeautifulSoup(s.content,"lxml-xml")
         file = open('content_page.xml', 'w')
-        file.write(contents)
+        file.write(soup.prettify().encode('UTF-8'))
         file.close()
         with open('content_page.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -131,10 +133,10 @@ class Document(object):
         url = "".join([TOC_BASEURL, id])
         print url
     
-        s = urllib.urlopen(url)
-        contents = s.read()
+        s = requests.get(url, stream=True)
+        soup = BeautifulSoup(s.content,"lxml-xml")
         file = open('toc.xml', 'w')
-        file.write(contents)
+        file.write(soup.prettify().encode('UTF-8'))
         file.close()
         with open('toc.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -147,10 +149,10 @@ class Document(object):
         url = "".join([TEXTEBRUT_BASEURL, id, '.texteBrut'])
         print url
     
-        s = urllib.urlopen(url)
-        contents = s.read()
+        s = requests.get(url, stream=True)
+        soup = BeautifulSoup(s.content,"lxml-xml")
         file = open('textebrut.xml', 'w')
-        file.write(contents)
+        file.write(soup.prettify().encode('UTF-8'))
         file.close()
         with open('textebrut.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -163,10 +165,11 @@ class Document(object):
         url = "".join([OCR_BASEURL, id, '&E=ALTO&Deb=', page])
         print url
     
-        s = urllib.urlopen(url)
-        contents = s.read()
-        file = open('oce.xml', 'w')
-        file.write(contents)
+        s = requests.get(url, stream=True)
+        soup = BeautifulSoup(s.content,"lxml-xml")
+        print soup
+        file = open('ocr.xml', 'w')
+        file.write(soup.prettify().encode('UTF-8'))
         file.close()
         with open('ocr.xml') as xml:
             doc = xmltodict.parse(xml.read())
