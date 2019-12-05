@@ -4,7 +4,7 @@ The package contains basic classes and associated methods for querying the [Sear
 
 ### Getting Started
 
-Install the requirements from your terminal:
+Download the project above, then unzip the file. In your terminal, navigate to the project folder and install the requirements:
 
 ```
 pip install -r requirements.txt
