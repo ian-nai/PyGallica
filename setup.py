@@ -12,6 +12,6 @@ setup(
     keywords = ['libraries', 'library', 'Gallica', 'France'],
     test_suite = 'tests',
     classifiers = [],
-    install_requires = [ 'requests', 'urllib', 'xmltodict']
+    install_requires = [ 'requests', 'beautifulsoup4', 'lxml', 'xmltodict' ]
 )
 
