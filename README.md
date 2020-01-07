@@ -2,7 +2,7 @@
 A Python wrapper for the National Library of France's Gallica API.
 The package contains basic classes and associated methods for querying the [Search API](http://api.bnf.fr/api-gallica-de-recherche), [Gallica IIIF API](http://api.bnf.fr/api-iiif-de-recuperation-des-images-de-gallica), and the [Document API](http://api.bnf.fr/api-document-de-gallica). No API keys are required.
 
-The folder [pygallica_api](https://github.com/ian-nai/PyGallica/tree/master/pygallica_api) contains the original, Python 2 version of the wrapper, and the folder [python3](https://github.com/ian-nai/PyGallica/tree/master/python3) contains the Python 3 version.
+The folder [pygallica_api](https://github.com/ian-nai/PyGallica/tree/master/pygallica_api) contains the original, Python 2 version of the wrapper, and the folder [python3](https://github.com/ian-nai/PyGallica/tree/master/python3) contains the Python 3 version. A Jupyter notebook walking through the wrapper's basic functionality (in Python 3) is available in [the jupyter folder](https://github.com/ian-nai/PyGallica/tree/master/jupyter).
 
 ### Getting Started
 
