@@ -31,7 +31,7 @@ The API takes an Ark ID, region, size, rotation, quality, and format as argument
 Example usage:
 ```
 >>> from iiif_api import IIIF
->>> IIIF.iiif('12148/btv1b90017179/f15', '0,1900,2400,1200', 'full', '0', 'native', 'jpg'
+>>> IIIF.iiif('12148/btv1b90017179/f15', '0,1900,2400,1200', 'full', '0', 'native', 'jpg')
 ```
 This will save your image in a new folder. To retrieve the metadata for an image, simply input an Ark ID:
 ```
