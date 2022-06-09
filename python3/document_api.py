@@ -20,7 +20,7 @@ class Document(object):
         soup = BeautifulSoup(s.content,"lxml-xml")
         print(soup)
         file = open('issues.xml', 'w')
-        file.write(soup.prettify().encode('UTF-8'))
+        file.write(str(soup.prettify().encode('UTF-8')))
         file.close()
         with open('issues.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -38,7 +38,7 @@ class Document(object):
         soup = BeautifulSoup(s.content,"lxml-xml")
         print(soup)
         file = open('issues_date.xml', 'w')
-        file.write(soup.prettify().encode('UTF-8'))
+        file.write(str(soup.prettify().encode('UTF-8')))
         file.close()
         with open('issues_date.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -55,7 +55,7 @@ class Document(object):
         s = requests.get(url, stream=True)
         soup = BeautifulSoup(s.content,"lxml-xml")
         file = open('oai.xml', 'w')
-        file.write(soup.prettify().encode('UTF-8'))
+        file.write(str(soup.prettify().encode('UTF-8')))
         file.close()
         with open('oai.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -72,7 +72,7 @@ class Document(object):
         s = requests.get(url, stream=True)
         soup = BeautifulSoup(s.content,"lxml-xml")
         file = open('pagination.xml', 'w')
-        file.write(soup.prettify().encode('UTF-8'))
+        file.write(str(soup.prettify().encode('UTF-8')))
         file.close()
         with open('pagination.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -102,7 +102,7 @@ class Document(object):
         s = requests.get(url, stream=True)
         soup = BeautifulSoup(s.content,"lxml-xml")
         file = open('content.xml', 'w')
-        file.write(soup.prettify().encode('UTF-8'))
+        file.write(str(soup.prettify().encode('UTF-8')))
         file.close()
         with open('content.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -119,7 +119,7 @@ class Document(object):
         s = requests.get(url, stream=True)
         soup = BeautifulSoup(s.content,"lxml-xml")
         file = open('content_page.xml', 'w')
-        file.write(soup.prettify().encode('UTF-8'))
+        file.write(str(soup.prettify().encode('UTF-8')))
         file.close()
         with open('content_page.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -136,7 +136,7 @@ class Document(object):
         s = requests.get(url, stream=True)
         soup = BeautifulSoup(s.content,"lxml-xml")
         file = open('toc.xml', 'w')
-        file.write(soup.prettify().encode('UTF-8'))
+        file.write(str(soup.prettify().encode('UTF-8')))
         file.close()
         with open('toc.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -152,7 +152,7 @@ class Document(object):
         s = requests.get(url, stream=True)
         soup = BeautifulSoup(s.content,"lxml-xml")
         file = open('textebrut.xml', 'w')
-        file.write(soup.prettify().encode('UTF-8'))
+        file.write(str(soup.prettify().encode('UTF-8')))
         file.close()
         with open('textebrut.xml') as xml:
             doc = xmltodict.parse(xml.read())
@@ -169,7 +169,7 @@ class Document(object):
         soup = BeautifulSoup(s.content,"lxml-xml")
         print(soup)
         file = open('ocr.xml', 'w')
-        file.write(soup.prettify().encode('UTF-8'))
+        file.write(str(soup.prettify().encode('UTF-8')))
         file.close()
         with open('ocr.xml') as xml:
             doc = xmltodict.parse(xml.read())
