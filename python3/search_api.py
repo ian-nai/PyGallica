@@ -29,7 +29,7 @@ class Search(object):
         #file.write(tree)
         #file.close()
         with open('gallica.xml', 'wb') as f:
-            f.write(soup.prettify().encode('UTF-8'))
+            file.write(str(soup.prettify().encode('UTF-8')))
             f.close()
         with open('gallica.xml') as xml:
             doc = xmltodict.parse(xml.read())
